@@ -15,7 +15,7 @@ public class MainTest {
 		 * set support type
 		 * there are four support measures: "MNI", "MI", "MVC", "MIS"
 		 * the MVC and MIS algorithm are approximate algorithms
-		 * the exact algotithms will take too much the runtime
+		 * the exact algotithms will take too much runtime
 		 */
 		String supType = "MNI";
 		
@@ -28,7 +28,7 @@ public class MainTest {
 		// If true, a dot file will be output for visualization using GraphViz
 		boolean outputDotFile = false;
 
-		// If true, use hypertree method
+		// If true, use the hypertree method
 		boolean getHypertree = false;
 		
 		// Apply the algorithm 
