@@ -14,7 +14,7 @@ public class MainTest {
 		/**
 		 * set support type
 		 * there are four support measures: "MNI", "MI", "MVC", "MIS"
-		 * the MVC and MIS algorithm are an approximate algorithm
+		 * the MVC and MIS algorithm are approximate algorithms
 		 * the exact algotithms will take too much the runtime
 		 */
 		String supType = "MNI";
