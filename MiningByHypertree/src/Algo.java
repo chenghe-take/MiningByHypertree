@@ -2,43 +2,6 @@ import java.io.*;
 import java.util.*;
 import java.util.Map.Entry;
 
-/* This file is copyright (c) 2018 by Chao Cheng
-* 
-* This file is part of the SPMF DATA MINING SOFTWARE
-* (http://www.philippe-fournier-viger.com/spmf).
-* 
-* SPMF is free software: you can redistribute it and/or modify it under the
-* terms of the GNU General Public License as published by the Free Software
-* Foundation, either version 3 of the License, or (at your option) any later
-* version.
-* 
-* SPMF is distributed in the hope that it will be useful, but WITHOUT ANY
-* WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
-* A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-* You should have received a copy of the GNU General Public License along with
-* SPMF. If not, see <http://www.gnu.org/licenses/>.
-*/
-/**
- * This is an implementation of the GSPAN algorithm <br/>
- * <br/>
- * 
- * The gspan algorithm is described in : <br/>
- * <br/>
- * 
- * gSpan: Graph-Based Substructure Pattern Mining, by X. Yan and J. Han. Proc.
- * 2002 of Int. Conf. on Data Mining (ICDM'02)
- * 
- * <br/>
- * <br/>
- * 
- * The Gspan algorithm finds all the frequents subgraphs and their support in a
- * graph provided by the user. <br/>
- * <br/>
- * 
- * This implementation saves the result to a file
- * 
- * @author Chao Cheng
- */
 public class Algo {
 
 	/**
@@ -1146,6 +1109,7 @@ public class Algo {
 //		return true;
 //	}
 
+	// approximate MVC algotithm
 	public static int MVC(Set<HyperEdge> hyperEdgeSet) {
 		if (hyperEdgeSet == null || hyperEdgeSet.isEmpty()) {
 			return 0;
@@ -1201,7 +1165,7 @@ public class Algo {
 
 
 
-
+	// approximate MIS algorithm
 	public static int MIS(Set<HyperEdge> hyperEdgeSet) {
 		if (hyperEdgeSet == null || hyperEdgeSet.isEmpty()) {
 			return 0;
@@ -1227,6 +1191,48 @@ public class Algo {
 		return independentSet.size();
 	}
 
+//	public static int MIS(Set<HyperEdge> hyperEdgeSet) {
+//	if (hyperEdgeSet == null || hyperEdgeSet.isEmpty()) {
+//		return 0;
+//	}
+//
+//	List<HyperEdge> edgeList = new ArrayList<>(hyperEdgeSet);
+//	int n = edgeList.size();
+//
+//	// Variable to store the size of the maximum independent edge set
+//	int maxIndepSetSize = 0;
+//
+//	// Generate all subsets of edges
+//	for (int i = 0; i < (1 << n); i++) {
+//		Set<HyperEdge> candidateSet = new HashSet<>();
+//		for (int j = 0; j < n; j++) {
+//			if ((i & (1 << j)) != 0) {
+//				candidateSet.add(edgeList.get(j));
+//			}
+//		}
+//
+//		// Check if the candidate set is an independent edge set
+//		if (isIndependentSet(candidateSet)) {
+//			maxIndepSetSize = Math.max(maxIndepSetSize, candidateSet.size());
+//		}
+//	}
+//
+//	return maxIndepSetSize;
+//	}
+//
+//	// This method checks if a set of edges forms an independent edge set
+//	private static boolean isIndependentSet(Set<HyperEdge> edgeSet) {
+//		Set<Integer> usedVertices = new HashSet<>();
+//		for (HyperEdge edge : edgeSet) {
+//			for (Integer vertex : edge.getHyperEdge()) {
+//				if (usedVertices.contains(vertex)) {
+//					return false; // Shared vertex, not independent
+//				}
+//				usedVertices.add(vertex);
+//			}
+//		}
+//		return true;
+//	}
 
 
 

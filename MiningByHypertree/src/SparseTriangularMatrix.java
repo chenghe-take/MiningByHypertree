@@ -3,18 +3,6 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
-
-/**
- * This class is for creating a triangular matrix of integers by using HashMaps (a sparse matrix rather than a full matrix).
- * See the TriangularMatrixArray class for more details about what is a triangular matrix.
- * 
- * @see AbstractTriangularMatrix
- * @see TriangularMatrix
- * @see AlgoCharm_Bitset
- * @see AlgoEclat_Bitset
- * @see AlgoEclat
- * @author Philippe Fournier-Viger
- */
 public class SparseTriangularMatrix{
 	
 	// the triangular matrix is a hashmap of hashmaps

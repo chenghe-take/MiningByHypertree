@@ -1,26 +1,23 @@
 import java.io.IOException;
 
-/**
- * Example of how to use the GSPAN algorithm 
- * from the source code and output the result to a file.
- * @author Chao Cheng & Philippe Fournier-Viger 2019
- */
 public class MainTest {
 
 	public static void main(String [] arg) throws IOException, ClassNotFoundException{
 
 		// set the input and output file path
-		String input = "Data/citeseer.lg";
+		String input = "Data/deezer.lg";
 		String output = ".//output.txt";
 
 		// set the minimum support threshold
-		int minSupport = 10;
+		int minSupport = 20;
 
 		/**
 		 * set support type
 		 * there are four support measures: "MNI", "MI", "MVC", "MIS"
+		 * the MVC and MIS algorithm are an approximate algorithm
+		 * the exact algotithms will take too much the runtime
 		 */
-		String supType = "MIS";
+		String supType = "MNI";
 		
 		// The maximum number of edges for frequent subgraph patterns
 		int maxNumberOfEdges = Integer.MAX_VALUE;

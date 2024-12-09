@@ -1,43 +1,6 @@
 import java.io.*;
 import java.util.*;
 
-/* This file is copyright (c) 2018 by Chao Cheng
-* 
-* This file is part of the SPMF DATA MINING SOFTWARE
-* (http://www.philippe-fournier-viger.com/spmf).
-* 
-* SPMF is free software: you can redistribute it and/or modify it under the
-* terms of the GNU General Public License as published by the Free Software
-* Foundation, either version 3 of the License, or (at your option) any later
-* version.
-* 
-* SPMF is distributed in the hope that it will be useful, but WITHOUT ANY
-* WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
-* A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-* You should have received a copy of the GNU General Public License along with
-* SPMF. If not, see <http://www.gnu.org/licenses/>.
-*/
-/**
- * This is an implementation of the DFS code of the GSPAN algorithm
- *  <br/><br/>
- *  
- * The gspan algorithm is described  in :
- * <br/><br/>
- *  
- * gSpan: Graph-Based Substructure Pattern Mining, by X. Yan and J. Han. 
- * Proc. 2002 of Int. Conf. on Data Mining (ICDM'02
- * 
- * <br/><br/>
- *  
- * The Gspan algorithm finds all the frequents subgraphs and their support in a
- * graph provided by the user.
- * <br/><br/>
- *  
- * This implementation saves the result to a file
- * 
- * @see Algo
- * @author Chao Cheng
- */
 public class DFSCode implements Serializable{
 	
     /** Serial UID */
