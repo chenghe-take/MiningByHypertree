@@ -38,7 +38,7 @@ Before running the program, you can configure the following parameters to custom
 - **getHypertree**: A boolean flag (`true`/`false`) that indicates whether to utilize the hypertree framework.
 
 ### Details
-Exact algorithms for MVC and MIS are in MaximumIndependentEdge.java and MinimumVertexCover.java. Users can refer to their implementation.
+Exact algorithms for MVC and MIS are in `MaximumIndependentEdge.java` and `MinimumVertexCover.java.` Users can refer to their implementation.
 
 ### Example Command
 
